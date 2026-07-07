@@ -4,7 +4,7 @@ import leia from "readline-sync"
      if(idade >= 18){
         console.log("Permitido")
      } else if(idade < 18) {
-        console.log("peça permissão aos seus pais: ")
+        console.log("peça permissão aos seus pais")
         var permissao = leia.question("Digite sim ou nao: ")
         if(permissao === "sim"){
             var nome = leia.question("Digite seu nome: ")
