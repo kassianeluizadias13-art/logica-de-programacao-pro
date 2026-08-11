@@ -20,7 +20,7 @@ function mostrarMenu () {
         console.log("------------OPCAO INVALIDA------------")
         return
     }  
-    jogo.iniciar()
+    jogo.iniciar(dificuldade)
 }
 
 mostrarMenu()

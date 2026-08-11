@@ -3,9 +3,6 @@ export const CONFIGURACOES = {
     altura: 15
 }
 
-
-
-
 export const SIMBOLOS = {
     parede: "🟪",
     vazio: "⬛",
@@ -15,6 +12,7 @@ export const SIMBOLOS = {
     inimigo: "👻",
     portal1: "🌀",
     portal2: "🔵",
+    comida: "🍎"
 };
 
 export const TIPOS_COMIDA = [

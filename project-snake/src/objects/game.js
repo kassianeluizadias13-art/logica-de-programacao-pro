@@ -1,4 +1,7 @@
+import readline from "readline"
 import { CONFIGURACOES, SIMBOLOS } from "../config/config.js"
+import { comida } from "./comida.js"
+import { inimigos } from "./inimigos.js"
 import { cobra } from "./snake.js"
 
 function iniciar(dificuldade){
@@ -16,6 +19,10 @@ function desenhar() {
         for(var x = -1; x <= CONFIGURACOES.largura; x++){
             if(x === -1 || x === CONFIGURACOES.largura || y === -1 || y === CONFIGURACOES.altura){
                 linha += SIMBOLOS.parede
+            } else if(comida.estaNaPosicao(x, y)){
+                linha += SIMBOLOS.comida
+            } else if(inimigos.estaNaPosicao(x, y)){
+                linha += SIMBOLOS.inimigo
             } else {
                 var drawCobra = false
                 for(var i = 0; i < cobra.partes.length; i++){
@@ -36,6 +43,19 @@ function desenhar() {
     console.clear()
     process.stdout.write("\x1b[H" + tela)
 }
+
+function configTeclado(){
+readline.emitKeypressEvents(process.stdin)
+readline.stdin.setRawMode(true)
+readline.stdin.resume()
+
+readline.stdin.on("keypress", (texto, tecla)=> {
+
+    
+})
+
+}
+
 
 export var jogo = {
     ponto: 0,
