@@ -50,7 +50,10 @@ readline.stdin.setRawMode(true)
 readline.stdin.resume()
 
 readline.stdin.on("keypress", (texto, tecla)=> {
-
+if(tecla.name === "w") cobra.alterarDirecao("w")
+    if(tecla.name === "a") cobra.alterarDirecao("a")
+        if(tecla.name === "s") cobra.alterarDirecao("s")
+            if(tecla.name === "d") cobra.alterarDirecao("d")
     
 })
 
