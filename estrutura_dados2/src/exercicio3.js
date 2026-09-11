@@ -44,14 +44,14 @@ do {
 } while(opcao != 0)
 
     switch(opcao){
-        case 1: 
+    case 1: 
         console.log("=== compromissos ===")
         compromisso.forEach(function(compromisso){
             console.log(" descriçao: ", compromisso.descricao,  " dia: ", compromisso.dia,
                 "horario: ", compromisso.horario)
         })
         break
-        case 2: 
+    case 2: 
         console.log("=== compromissos pendentes ===")
         compromissos.forEach(function(compromisso){
             if(compromisso.concluido == false){
@@ -60,7 +60,7 @@ do {
                 )
             } 
     }) 
-    break
+        break
     case 3:
         var num = leia.questionInt("digite o numero de compromisso para concluir: ")
         if(num >= 1 && num <= compromissos.length){
